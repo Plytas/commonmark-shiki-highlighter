@@ -31,6 +31,7 @@ class ShikiHighlighter
             $highlightedContents = $this->shiki->highlightCode(
                 $contents,
                 $language,
+                null,
                 [
                     'addLines' => $addLines,
                     'deleteLines' => $deleteLines,
