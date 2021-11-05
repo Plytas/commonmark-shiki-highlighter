@@ -18,7 +18,7 @@
     "require": {
         "php": "^7.4",
         "league/commonmark": "^2.0",
-        "spatie/shiki-php": "^1.1.1",
+        "spatie/shiki-php": "dev-master",
         "symfony/process": "^5.3"
     },
     "require-dev": {
@@ -27,6 +27,12 @@
         "spatie/phpunit-snapshot-assertions": "^4.2.7",
         "spatie/ray": "^1.28"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/Plytas/shiki-php"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "Spatie\\CommonMarkShikiHighlighter\\": "src"
