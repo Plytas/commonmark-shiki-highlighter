@@ -38,7 +38,7 @@ class ShikiHighlighter
                     'focusLines' => $definition['focusLines'],
                 ]
             );
-        } catch (Exception) {
+        } catch (Exception $exception) {
             $highlightedContents = $contents;
         }
 
