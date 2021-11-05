@@ -36,7 +36,7 @@ class ShikiHighlighter
                     'deleteLines' => $deleteLines,
                     'highlightLines' => $definition['highlightLines'],
                     'focusLines' => $definition['focusLines'],
-                ],
+                ]
             );
         } catch (Exception) {
             $highlightedContents = $contents;
