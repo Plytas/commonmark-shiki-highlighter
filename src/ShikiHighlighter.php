@@ -7,9 +7,12 @@ use Spatie\ShikiPhp\Shiki;
 
 class ShikiHighlighter
 {
+    protected Shiki $shiki;
+    
     public function __construct(
-        protected Shiki $shiki
+        Shiki $shiki
     ) {
+        $this->shiki = $shiki;
     }
 
     public function highlight(string $codeBlock, ?string $infoLine = null): string
@@ -26,9 +29,9 @@ class ShikiHighlighter
 
         try {
             $highlightedContents = $this->shiki->highlightCode(
-                code: $contents,
-                language: $language,
-                options: [
+                $contents,
+                $language,
+                [
                     'addLines' => $addLines,
                     'deleteLines' => $deleteLines,
                     'highlightLines' => $definition['highlightLines'],
