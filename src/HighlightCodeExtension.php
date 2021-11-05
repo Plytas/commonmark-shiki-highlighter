@@ -12,14 +12,17 @@ use Spatie\ShikiPhp\Shiki;
 
 class HighlightCodeExtension implements ExtensionInterface
 {
+    protected string $theme;
+    
     public function __construct(
-        protected string $theme
+        string $theme
     ) {
+        $this->theme = $theme;
     }
 
     public function register(EnvironmentBuilderInterface $environment): void
     {
-        $shiki = new Shiki(defaultTheme: $this->theme);
+        $shiki = new Shiki($this->theme);
 
         $codeBlockHighlighter = new ShikiHighlighter($shiki);
 
