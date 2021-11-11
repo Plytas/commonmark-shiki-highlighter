@@ -18,7 +18,7 @@
     "require": {
         "php": "^7.4",
         "league/commonmark": "^2.0",
-        "spatie/shiki-php": "dev-main",
+        "spatie/shiki-php": "dev-php74",
         "symfony/process": "^5.3"
     },
     "require-dev": {
